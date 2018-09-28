@@ -1,0 +1,50 @@
+/* Responsive Styles */
+
+/* Extra small devices (portrait phones, less than 544px)*/
+@media (max-width: 543px) {
+	
+	h1 {
+    	font-size: 30px;    
+	}
+
+	h2 {
+		font-size: 25px;
+	}
+	
+	h3 {
+		font-size: 20px;
+	}
+	
+	.footer-right {
+		float: left;
+		line-height: 0px;
+		padding-left:20px;
+	}		
+	
+	.footer-right li,
+	.footer-right li > a {
+		display: block;			
+	}
+	
+}
+
+/*Small devices (landscape phones, 544px and up)*/
+/* @media(max-width:767px) { */
+@media (min-width: 544px) and (max-width: 767px) { 
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }    
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+

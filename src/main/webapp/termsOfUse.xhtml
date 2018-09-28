@@ -1,0 +1,114 @@
+<ui:composition template="/layout/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="body">
+
+		<ui:include src="/layout/header_internal.xhtml" />		
+		
+	    	<!-- Page Content -->
+		    <div class="container">
+		
+		        <!-- Page Heading -->
+		        <div class="row">
+		            <div class="col-lg-12">
+		                <h2 class="page-header">#{msgs['terms.of.use.title']}</h2>		                
+		            </div>
+		        </div>
+		        <!-- /.row -->				
+		
+		        <!-- Intro Content -->
+		        <div class="row">		            
+		            <div class="col-lg-12">
+		            	<h3>#{msgs['terms.of.use.general.vision']}</h3>
+		                <p>
+		                	#{msgs['terms.of.use.general.vision.paragraph1']}
+						</p>
+						<p>
+							#{msgs['terms.of.use.general.vision.paragraph2']}		                
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.general.vision.paragraph3']}		                
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.general.vision.paragraph4']}		                
+		                </p>
+		                <h3>#{msgs['terms.of.use.general.conditions.title']}</h3>
+		                <p>
+		                	#{msgs['terms.of.use.general.conditions.paragraph1']}		                
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.general.conditions.paragraph2']}
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.general.conditions.paragraph3']}		                
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.general.conditions.paragraph4']}		                
+		                </p>
+		                <h3>#{msgs['terms.of.use.precision.integrity.update.title']}</h3>
+		                <p>
+		                	#{msgs['terms.of.use.precision.integrity.update.paragraph1']}		                
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.precision.integrity.update.paragraph2']}
+		                </p>
+		                <h3>#{msgs['terms.of.use.third.party.links.title']}</h3>
+		                <p>
+		                	#{msgs['terms.of.use.third.party.links.paragraph1']}		                
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.third.party.links.paragraph2']}
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.third.party.links.paragraph3']}		                
+		                </p>
+		                <h3>#{msgs['terms.of.use.personal.information.title']}</h3>
+		                <p>
+		                	#{msgs['terms.of.use.personal.information.paragraph1']}		                
+		                </p>
+		                <h3>#{msgs['terms.of.use.errors.inaccuracies.omissions.title']}</h3>
+		                <p>
+		                	#{msgs['terms.of.use.errors.inaccuracies.omissions.paragraph1']}			                
+		                </p>
+		                <h3>#{msgs['terms.of.use.forbidden.uses.title']}</h3>
+		                <p>
+		                	#{msgs['terms.of.use.forbidden.uses.paragraph1']}		                
+		                </p>
+		                <h3>#{msgs['terms.of.use.limitation.liability.title']}</h3>
+		                <p>
+		                	#{msgs['terms.of.use.limitation.liability.paragraph1']}		                
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.limitation.liability.paragraph2']}		                
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.limitation.liability.paragraph3']}		                
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.limitation.liability.paragraph4']}		                
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.limitation.liability.paragraph5']}		                
+		                </p>
+		                <h3>#{msgs['terms.of.use.changes.terms.of.use.title']}</h3>
+		                <p>
+		                	#{msgs['terms.of.use.limitation.liability.paragraph1']}		                
+		                </p>
+		                <p>
+		                	#{msgs['terms.of.use.limitation.liability.paragraph2']}	                
+		                </p>
+		            </div>
+		        </div>
+		        <!-- /.row -->		    
+			
+			</div>
+			<!-- /.container -->
+			
+			<ui:include src="/layout/footer.xhtml" />
+		
+	</ui:define>
+</ui:composition>
