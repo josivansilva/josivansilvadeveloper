@@ -1,0 +1,117 @@
+<ui:composition template="/layout/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="body">
+
+		<ui:include src="/layout/header_internal.xhtml" />
+		
+	    	<!-- Page Content -->
+		    <div class="container">
+		
+		        <!-- Page Heading -->
+		        <div class="row">
+		            <div class="col-lg-12">
+		                <h2 class="page-header">#{msgs['contact.title']}</h2>		                
+		            </div>
+		        </div>
+		        <!-- /.row -->				
+		
+		        <!-- Content Row -->
+	        	<div class="row">		            
+		            <!-- Contact Details Column -->
+		            <div class="col-md-4">		                
+		                <p>
+		                    #{msgs['contact.subtitle1']}<br/>
+							#{msgs['contact.subtitle2']}
+		                </p>
+		                <br/>
+		                <p>
+                    		Porto Alegre, Rio Grande do Sul, Brazil
+                		</p>
+                		<p>
+                			<i class="fa fa-phone"></i> +55 51 98260-2210
+                		</p>
+		                <p>
+		                	<i class="fa fa-envelope-o"></i> <a href="mailto:josivan@josivansilva.com">josivan@josivansilva.com</a>
+		                </p>
+		                <p>
+		                	<i class="fa fa-clock-o"></i> #{msgs['contact.office.hour']}
+		                </p>		                
+		            </div>
+	        	</div>
+	        	<!-- /.row -->
+
+		        <!-- Contact Form -->		        
+		        <div class="row">
+		            <div class="col-md-8">		                
+		                <br/>
+		                <h:form id="contactForm">		                			                
+		                    <div class="control-group form-group">
+		                        <div class="controls">
+		                            <label>#{msgs['contact.full.name']}</label>
+		                            <p:inputText id="txtName" value="#{contactController.fullNameForm}" maxlength="100" styleClass="form-control" />		                            
+		                        </div>
+		                    </div>
+		                    <div class="control-group form-group">
+		                        <div class="controls">
+		                            <label>CNPJ</label>
+		                            <p:inputText id="txtCnpj" value="#{contactController.cnpjForm}" maxlength="18" styleClass="form-control" />
+		                        </div>
+		                    </div>
+		                    <div class="control-group form-group">
+		                        <div class="controls">
+		                            <label>CPF</label>		                            
+		                            <p:inputText id="txtCpf" value="#{contactController.cpfForm}" maxlength="14" styleClass="form-control" />
+		                        </div>
+		                    </div>
+		                    <div class="control-group form-group">
+		                        <div class="controls">
+		                            <label>#{msgs['contact.phone']}</label>
+		                            <p:inputText id="txtPhone" value="#{contactController.phoneForm}" maxlength="15" styleClass="form-control" />
+		                        </div>
+		                    </div>
+		                    <div class="control-group form-group">
+		                        <div class="controls">
+		                            <label>Email</label>
+		                            <p:inputText id="txtEmail" value="#{contactController.emailForm}" maxlength="100" styleClass="form-control" />
+		                        </div>
+		                    </div>
+		                    <div class="control-group form-group">
+		                        <div class="controls">
+		                            <label>#{msgs['contact.message']}</label>
+		                            <p:inputTextarea rows="5" cols="100" id="txtMessage" counter="display" value="#{contactController.messageForm}" maxlength="2000" counterTemplate="Restando {0} caracteres." autoResize="false" styleClass="form-control" />
+    								<h:outputText id="display" />
+		                        </div>
+		                    </div>	                    
+		                    
+		                     <div class="control-group form-group">
+		                        <div class="controls">				                    
+				                    <div class="g-recaptcha" data-sitekey="6LfE4hUUAAAAAHJUDEPTZJtHZe0nhwoDFwy4i_Bu"></div>				                    
+			                    </div>		                        
+		                    </div>
+		                    
+		                    <p:messages id="messages" showDetail="true" autoUpdate="true" closable="false" />
+		                    <p:commandButton 
+		                    	value="#{msgs['contact.send.button']}"
+		                    	id="btnSend"
+		                    	actionListener="#{contactController.processForm}"
+		                    	onclick="javascript:hideWithTimer('contactForm\\:messages');"
+		                    	update="txtName, txtCnpj, txtCpf, txtPhone, txtEmail, txtMessage"
+		                    	styleClass="btn btn-primary" />
+		                </h:form>
+		            </div>
+		
+		        </div>
+		        <!-- /.row -->		    
+			
+			</div>
+			<!-- /.container -->
+			
+			<ui:include src="/layout/footer.xhtml" />
+		
+	</ui:define>
+</ui:composition>
